@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--日志级别以优先级别排序：OFF>FATAL>ERROR>WARN>INFO>DUBUG>TARCE>ALL -->
+<!--Configuration后面的status用于设hilog4j2自身内部的信息暑促，可以补充设置-->
+<Configuration status="DUBUG">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
